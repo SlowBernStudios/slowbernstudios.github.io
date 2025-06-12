@@ -1,42 +1,38 @@
 body {
-  background: #1a130f; /* deep soot/charcoal */
-  color: #fcebd5; /* warm candlelight white */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #1a130f;
+  color: #fcebd5;
+}
+
+/* Wrap layout */
+.layout {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header styles */
+header {
+  background-color: #1a130f;
+  padding: 1.5rem 2rem;
+  border-bottom: 2px solid #ff6b2d;
   text-align: center;
 }
 
-.container {
-  max-width: 600px;
+/* Main container */
+main.container {
+  flex: 1;
   padding: 2rem;
+  text-align: center;
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #ff6b2d; /* ember orange */
-  text-shadow: 0 0 10px rgba(255, 107, 45, 0.6), 0 0 20px rgba(255, 190, 120, 0.3);
-}
-
-p {
-  font-size: 1.2rem;
-  margin: 1rem 0 2rem;
-  color: #ffe9c9; /* soft waxy cream */
-}
-
-nav a {
-  margin: 0 0.75rem;
-  text-decoration: none;
-  color: #ffd07f; /* flickering yellow */
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #ffb347; /* warmer orange glow on hover */
-  text-shadow: 0 0 5px rgba(255, 140, 0, 0.4);
+/* Footer */
+footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  background: #140f0c;
+  color: #a78c74;
+  border-top: 1px solid #ff6b2d;
 }
