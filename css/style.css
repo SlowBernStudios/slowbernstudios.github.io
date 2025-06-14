@@ -75,13 +75,13 @@ header {
 .logo {
   margin-bottom: 20px;
   display: block;
-  width: 100%;
+  width: 300%;
 }
 
 .logo-img {
-  max-width: 100%;
+  max-width: 300%;
   height: auto;
-  max-height: 60px;
+  max-height: 180px;
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgba(212, 97, 10, 0.3));
 }
