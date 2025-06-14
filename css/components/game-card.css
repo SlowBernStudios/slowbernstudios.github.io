@@ -1,6 +1,7 @@
 /* css/components/game-card.css */
 .game-card {
     display: flex;
+    flex-direction: column; /* changed from row to column */
     margin: 20px 0;
     padding: 20px;
     border-radius: 10px;
@@ -9,22 +10,24 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .game-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
 .game-image {
-    flex: 0 0 300px;
-    margin-right: 20px;
+    width: 100%;
+    margin: 0 0 15px 0;
 }
 
 .game-image img {
     width: 100%;
-    height: 200px;
+    height: auto; /* let it scale proportionally */
     object-fit: cover;
     border-radius: 8px;
 }
+
 
 .game-info {
     flex: 1;
