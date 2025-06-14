@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initHomepage() {
     // Display featured games on homepage
     if (document.getElementById('featured-games')) {
-        const featuredGames = gamesData.current.slice(0, 3); // Show first 3 games
+        const featuredGames = gamesData.current.slice(0, 4); // Show first 4 games
         const featuredHTML = featuredGames.map(game => createFeaturedGameCard(game)).join('');
         document.getElementById('featured-games').innerHTML = featuredHTML;
     }

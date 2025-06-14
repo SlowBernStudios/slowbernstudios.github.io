@@ -71,20 +71,23 @@ header {
   text-align: center;
 }
 
-/* Logo Styles - Full Width */
+/* Logo Styles - Centered and Responsive */
 .logo {
   margin-bottom: 20px;
-  display: block;
-  width: 300%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .logo-img {
-  max-width: 300%;
+  max-width: 100%;
+  width: auto;
   height: auto;
-  max-height: 180px;
+  max-height: 160px;
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgba(212, 97, 10, 0.3));
 }
+
 
 /* Navigation Styles - Below Logo */
 nav {
