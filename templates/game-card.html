@@ -1,0 +1,32 @@
+<!-- Template for individual game cards - used for reference -->
+<div class="game-card" data-tags="{tags}" data-status="{status}" data-genre="{genre}">
+    <div class="game-image">
+        <img src="assets/images/games/{id}/{image}" alt="{title}" loading="lazy">
+    </div>
+    <div class="game-info">
+        <span class="game-status {status}">{status}</span>
+        <h3>{title}</h3>
+        <div class="game-genre">{genre}</div>
+        <p>{description}</p>
+
+        <div class="game-features">
+            <h4>Key Features:</h4>
+            <div class="feature-list">
+                <!-- Features will be inserted here -->
+            </div>
+        </div>
+
+        <div class="game-tags">
+            <!-- Tags will be inserted here -->
+        </div>
+
+        <div class="game-platforms">
+            <strong>Platforms:</strong> {platforms}
+        </div>
+
+        <div class="game-links">
+            <!-- Download links will be inserted here -->
+            <a href="pages/games/{id}.html" class="download-link info">Learn More</a>
+        </div>
+    </div>
+</div>

@@ -1,56 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Games | Slowbern Studios</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - Slowbern Studios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/games.css">
+    <link rel="stylesheet" href="css/components/game-card.css">
 </head>
 <body>
-  <div class="layout">
-    <header>
-      <h1><a href="/" style="text-decoration: none; color: inherit;">🔥 Slowbern Studios</a></h1>
-      <nav>
-        <ul class="menu">
-          <li><a href="index.html">Home</a></li>
-          <li class="dropdown">
-            <a href="games.html">Games</a>
-            <ul class="dropdown-content">
-              <li><a href="#">Water to a Fish</a></li>
-              <li><a href="#">Beneath the Waves</a></li>
-              <li><a href="#">Prisn</a></li>
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <img src="assets/images/logos/slowbern_studios.png" alt="Slowbern Studios" class="logo-img">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html" class="active">Games</a></li>
+                <li><a href="devlog.html">Dev Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-          </li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <header class="page-header">
+        <h1>Our Games</h1>
+        <p>Explore our collection of indie games spanning puzzle-platformers, simulators, and mobile experiences</p>
     </header>
 
-    <main class="container">
-      <h2>Games</h2>
-      <ul class="game-list">
-        <li>
-          <strong>Water to a Fish</strong> – a satirical underwater retail sim where you must build your water-selling business empire!
-        </li>
-        <li>
-          <strong>Beneath the Waves</strong> – a heartwarming underwater social sim, where you must befriend ocean creatures by helping them with conservation efforts.
-        </li>
-        <li>
-          <strong>Prisn</strong> – a cel-shaded, dark puzzle-platformer where you play as a wrongfully imprisoned painter, who must use art to escape from prison and uncover the truth behind the monotonous world.
-        </li>
-      </ul>
-    </main>
+    <section class="filters">
+        <h2>Filter Games</h2>
+        <div class="filter-categories">
+            <div class="filter-group">
+                <h3>Status</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Games</button>
+                    <button class="filter-btn" data-filter="released">Released</button>
+                    <button class="filter-btn" data-filter="in-development">In Development</button>
+                </div>
+            </div>
 
-    <footer>
-      <p>&copy; 2025 Slowbern Studios. All rights reserved.</p>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-discord"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-      </div>
-    </footer>
-  </div>
+            <div class="filter-group">
+                <h3>Genre</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-filter="puzzle-platformer">Puzzle-Platformer</button>
+                    <button class="filter-btn" data-filter="retail-simulator">Retail Simulator</button>
+                    <button class="filter-btn" data-filter="social-simulator">Social Simulator</button>
+                    <button class="filter-btn" data-filter="logic-puzzle">Logic Puzzle</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Platform</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-filter="pc">PC</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="steam">Steam</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Themes</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-filter="underwater">Underwater</button>
+                    <button class="filter-btn" data-filter="puzzle">Puzzle</button>
+                    <button class="filter-btn" data-filter="cozy">Cozy</button>
+                    <button class="filter-btn" data-filter="simulation">Simulation</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="games-section">
+        <div id="games-container">
+            <!-- Games will be loaded here dynamically -->
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Slowbern Studios. All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="js/data/games-data.js"></script>
+<script src="js/games.js"></script>
+<script src="js/meta-manager.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
