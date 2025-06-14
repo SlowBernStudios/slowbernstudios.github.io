@@ -1,19 +1,33 @@
-/* Games Page Specific Styles */
+/* Games Page Specific Styles - Fire Theme */
 
 /* Filters Section */
 .filters {
     background: var(--card-background);
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 30px;
     margin-bottom: 40px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    border: 2px solid var(--ember-orange);
+    position: relative;
+    overflow: hidden;
+}
+
+.filters::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--ember-orange), var(--hot-ember), var(--golden-ember));
 }
 
 .filters h2 {
-    color: var(--primary-color);
+    color: var(--ember-text);
     margin-bottom: 25px;
     text-align: center;
     font-size: 1.8em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .filter-categories {
@@ -24,13 +38,17 @@
 
 .filter-group {
     text-align: center;
+    background: var(--light-card);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--medium-brown);
 }
 
 .filter-group h3 {
-    color: var(--primary-color);
+    color: var(--ember-text);
     margin-bottom: 15px;
     font-size: 1.2em;
-    border-bottom: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--ember-orange);
     padding-bottom: 8px;
 }
 
@@ -54,16 +72,30 @@
 .game-header {
     text-align: center;
     margin-bottom: 40px;
-    padding: 30px;
+    padding: 40px;
     background: var(--card-background);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    border: 2px solid var(--ember-orange);
+    position: relative;
+    overflow: hidden;
+}
+
+.game-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--ember-orange), var(--hot-ember), var(--golden-ember));
 }
 
 .game-header h1 {
-    color: var(--primary-color);
+    color: var(--ember-text);
     font-size: 2.5em;
     margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .game-meta {
@@ -75,11 +107,12 @@
 }
 
 .release-date {
-    background: var(--secondary-color);
+    background: linear-gradient(135deg, var(--ember-orange) 0%, var(--deep-ember) 100%);
     color: white;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 20px;
     font-weight: bold;
+    box-shadow: 0 4px 8px rgba(212, 97, 10, 0.3);
 }
 
 .platforms {
@@ -89,19 +122,20 @@
 }
 
 .platform {
-    background: var(--tag-background);
-    color: var(--tag-color);
-    padding: 6px 12px;
+    background: var(--light-card);
+    color: var(--warm-text);
+    padding: 8px 16px;
     border-radius: 15px;
     font-size: 0.9em;
     font-weight: bold;
+    border: 1px solid var(--medium-brown);
 }
 
 /* Game Gallery */
 .game-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 25px;
     margin: 40px 0;
 }
 
@@ -109,50 +143,57 @@
     width: 100%;
     height: 250px;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
+    border: 2px solid var(--medium-brown);
 }
 
 .game-gallery img:hover {
     transform: scale(1.05);
+    border-color: var(--ember-orange);
+    box-shadow: 0 8px 20px rgba(212, 97, 10, 0.4);
 }
 
 /* Game Description */
 .game-description {
     background: var(--card-background);
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 15px;
     margin: 40px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    border: 1px solid var(--medium-brown);
 }
 
 .game-description h2 {
-    color: var(--primary-color);
+    color: var(--ember-text);
     margin-bottom: 20px;
     font-size: 1.8em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .game-description p {
     font-size: 1.1em;
     line-height: 1.8;
-    color: #555;
+    color: var(--warm-text);
 }
 
 /* Download Section */
 .download-section {
     background: var(--card-background);
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 15px;
     margin: 40px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    border: 1px solid var(--ember-orange);
 }
 
 .download-section h2 {
-    color: var(--primary-color);
+    color: var(--ember-text);
     margin-bottom: 25px;
     font-size: 1.8em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .download-links {
@@ -165,7 +206,7 @@
 .download-link {
     display: inline-block;
     padding: 15px 30px;
-    background: var(--secondary-color);
+    background: linear-gradient(135deg, var(--ember-orange) 0%, var(--deep-ember) 100%);
     color: white;
     text-decoration: none;
     border-radius: 25px;
@@ -173,64 +214,81 @@
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(212, 97, 10, 0.3);
 }
 
 .download-link:hover {
-    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--hot-ember) 0%, var(--ember-orange) 100%);
     transform: translateY(-3px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(212, 97, 10, 0.5);
 }
 
 .download-link.steam {
-    background: #1b2838;
+    background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%);
+}
+
+.download-link.steam:hover {
+    background: linear-gradient(135deg, #2a475e 0%, #1b2838 100%);
 }
 
 .download-link.itch {
-    background: #fa5c5c;
+    background: linear-gradient(135deg, #fa5c5c 0%, #e74c3c 100%);
+}
+
+.download-link.itch:hover {
+    background: linear-gradient(135deg, #ff6b6b 0%, #fa5c5c 100%);
 }
 
 .download-link.mobile {
-    background: #4caf50;
+    background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+}
+
+.download-link.mobile:hover {
+    background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
 }
 
 /* Coming Soon Section */
 .coming-soon {
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    background: linear-gradient(135deg, var(--ember-orange) 0%, var(--deep-ember) 100%);
     color: white;
     padding: 40px;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
     margin: 40px 0;
+    box-shadow: 0 6px 16px rgba(212, 97, 10, 0.4);
 }
 
 .coming-soon h2 {
     font-size: 2em;
     margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 /* Game Tags */
 .game-tags {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: wrap;
     margin: 40px 0;
 }
 
 .tag {
-    background: var(--tag-background);
-    color: var(--tag-color);
-    padding: 8px 16px;
+    background: var(--light-card);
+    color: var(--warm-text);
+    padding: 10px 20px;
     border-radius: 20px;
     font-size: 0.9em;
     font-weight: bold;
     transition: all 0.3s ease;
+    border: 1px solid var(--medium-brown);
 }
 
 .tag:hover {
-    background: var(--secondary-color);
+    background: var(--ember-orange);
     color: white;
     transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(212, 97, 10, 0.3);
 }
 
 /* News Items */
@@ -238,23 +296,25 @@
     background: var(--card-background);
     margin: 30px 0;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
+    border: 1px solid var(--medium-brown);
 }
 
 .news-item:hover {
     transform: translateY(-3px);
+    border-color: var(--ember-orange);
 }
 
 .news-header {
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid var(--ember-orange);
     padding-bottom: 15px;
     margin-bottom: 20px;
 }
 
 .news-header h3 {
-    color: var(--primary-color);
+    color: var(--ember-text);
     font-size: 1.5em;
     margin-bottom: 10px;
 }
@@ -267,7 +327,7 @@
 }
 
 .news-meta .category {
-    padding: 6px 12px;
+    padding: 8px 16px;
     border-radius: 15px;
     font-size: 0.8em;
     text-transform: uppercase;
@@ -275,22 +335,22 @@
 }
 
 .news-meta .category.update {
-    background: #3498db;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
     color: white;
 }
 
 .news-meta .category.release {
-    background: #27ae60;
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
     color: white;
 }
 
 .news-meta .category.announcement {
-    background: #e74c3c;
+    background: linear-gradient(135deg, var(--flame-red) 0%, var(--burnt-orange) 100%);
     color: white;
 }
 
 .news-meta .date {
-    color: #666;
+    color: var(--light-ash);
     font-style: italic;
 }
 
