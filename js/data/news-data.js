@@ -46,25 +46,3 @@ const newsData = [
         "featured": true
     }
 ];
-
-// Make sure the DevlogManager class is updated to handle the new data structure
-class DevlogManager {
-    renderNews() {
-        return newsData.map(news => `
-            <article class="news-item ${news.featured ? 'featured' : ''}" data-category="${news.category}">
-                <div class="news-header">
-                    <h3>${news.title}</h3>
-                    <div class="news-meta">
-                        <span class="date">${news.date}</span>
-                        <span class="category ${news.category}">${news.category}</span>
-                        ${news.tags ? news.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
-                    </div>
-                </div>
-                <div class="news-content">
-                    ${news.content}
-                </div>
-                ${news.image ? `<img src="assets/images/blog/${news.image}" alt="${news.title}" class="news-image">` : ''}
-            </article>
-        `).join('');
-    }
-}

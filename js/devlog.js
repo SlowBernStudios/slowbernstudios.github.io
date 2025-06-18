@@ -1,4 +1,3 @@
-// js/devlog.js
 class DevlogManager {
     constructor() {
         this.news = newsData;
@@ -20,7 +19,7 @@ class DevlogManager {
 
     createNewsItem(news) {
         return `
-            <article class="news-item" data-category="${news.category}">
+            <article class="news-item ${news.featured ? 'featured' : ''}" data-category="${news.category}">
                 <div class="news-header">
                     <h3>${news.title}</h3>
                     <div class="news-meta">
@@ -29,12 +28,12 @@ class DevlogManager {
                     </div>
                 </div>
                 <div class="news-content">
-                    <p>${news.content}</p>
-                    ${news.image ? `<img src="assets/images/news/${news.image}" alt="${news.title}">` : ''}
+                    ${news.content}
                 </div>
                 <div class="news-tags">
-                    ${news.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    ${news.tags ? news.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
                 </div>
+                ${news.image ? `<img src="assets/images/blog/${news.image}" alt="${news.title}" class="news-image">` : ''}
             </article>
         `;
     }
@@ -49,6 +48,10 @@ class DevlogManager {
         filterButtons.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 this.filterNews(e.target.dataset.filter);
+
+                // Update active button
+                filterButtons.forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
             });
         });
     }
@@ -64,3 +67,8 @@ class DevlogManager {
         });
     }
 }
+
+// Initialize the DevlogManager when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    new DevlogManager();
+});
