@@ -32,7 +32,7 @@
 </main>
 
 <footer>
-    <p>&copy; 2024 Slowbern Studios. All rights reserved.</p>
+    <p>&copy; 2025 Slowbern Studios. All rights reserved.</p>
 </footer>
 
 <script src="../../js/data/games-data.js"></script>
@@ -64,23 +64,6 @@
                         <h2>About the Game</h2>
                         <p>${game.description}</p>
                         ${game.status === 'in-development' ? '<p><em>This game is currently in development. Stay tuned for updates!</em></p>' : ''}
-                    </div>
-                    
-                    ${Object.keys(game.downloadLinks).length > 0 ? `
-                    <div class="download-section">
-                        <h2>Get the Game</h2>
-                        <div class="download-links">
-                            ${Object.entries(game.downloadLinks).map(([platform, url]) => `
-                                <a href="${url}" class="download-link ${platform}" target="_blank">
-                                    Download on ${platform}
-                                </a>
-                            `).join('')}
-                        </div>
-                    </div>
-                    ` : '<div class="coming-soon"><h2>Coming Soon</h2><p>This game is still in development. Follow us for updates!</p></div>'}
-                    
-                    <div class="game-tags">
-                        ${game.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                     </div>
                 `;
 

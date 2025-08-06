@@ -3,7 +3,6 @@ const newsData = [
     {
         "id": "welcome-to-slowbern",
         "title": "Our Journey Begins",
-        "date": "2025-06-18",
         "category": "announcement",
         "gameId": null,
         "content": `
@@ -24,8 +23,6 @@ const newsData = [
                 <li><strong>Water to a Fish</strong> – Take on the quirky challenge of running a boutique water shop for a town of discerning aquatic customers. Balance your books, manage stock, and serve a cast of eccentric fish—all while protecting your reputation in a playful time management sim where every bottle counts.</li>
                 
                 <li><strong>Prisn</strong> – Step into the shoes of a wrongfully imprisoned optical scientist in this narrative puzzle-platformer. Escape isn't just about clever platforming; you'll need to master color theory, mix light and pigments, and outwit color-coded security systems—all wrapped in a story of resilience and the science of seeing.</li>
-                
-                <li><strong>Mind the Gap</strong> – A hypercasual puzzle game inspired by comic strips, where every level is a tiny logic mystery. Drag, drop, and deduce your way through bite-sized visual stories—no reading required. Designed for mobile, Mind the Gap is easy to pick up, but sharpens reasoning, sequencing, and inference with every play.</li>
             </ul>
             
             <p>Each of these projects is rooted in our philosophy: playful experimentation, thoughtful mechanics, and a sense of wonder. We hope they'll delight players who crave something a little off the beaten path—games that make you smile, pause, or maybe even see things in a new light.</p>

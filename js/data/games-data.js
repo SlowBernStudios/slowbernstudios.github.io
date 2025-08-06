@@ -4,58 +4,35 @@ const gamesData = {
         {
             "id": "prisn",
             "title": "Prisn",
-            "description": "A dark, cel-shaded puzzle-platformer in which a wrongfully imprisoned painter must use color to escape",
+            "description": "A dark, cel-shaded puzzle-platformer where you play as a wrongfully imprisoned scientist using light and color to escape. Solve environmental puzzles, learn real color theory, and uncover a prison-wide conspiracy hidden in the spectrum.",
             "status": "in-development",
             "releaseDate": "N/A",
-            "platforms": ["PC", "Steam"],
             "images": ["prisn_logo.png"],
             "trailerUrl": "",
             "downloadLinks": {},
-            "tags": ["indie", "puzzle", "platformer", "dark", "cel-shaded"],
-            "genre": "Puzzle-Platformer",
-            "features": ["Color-based mechanics", "Puzzle solving", "Artistic visuals", "Story-driven"]
+            "genre": "Puzzle-Platformer"
         },
         {
             "id": "watertoafish",
             "title": "Water To A Fish",
-            "description": "An underwater retail simulator where you must build your business of selling water to fish",
+            "description": "A tongue-in-cheek underwater retail sim where you sell bottled water to picky fish. Restock shelves, manage pricing, deal with thieves, and keep your 5-star rating as your shop scales from humble tank to ocean empire.",
             "status": "in-development",
             "releaseDate": "N/A",
-            "platforms": ["PC", "Steam"],
             "images": ["watertoafish_logo.png"],
             "trailerUrl": "",
             "downloadLinks": {},
-            "tags": ["indie", "simulation", "underwater", "business", "quirky"],
-            "genre": "Retail Simulator",
-            "features": ["Business management", "Underwater setting", "Customer service", "Quirky humor"]
+            "genre": "Retail Simulator"
         },
         {
             "id": "beneaththewaves",
             "title": "Beneath The Waves",
-            "description": "An underwater cozy social-simulator where you must befriend sea creatures by helping them with ocean conservation",
+            "description": "A cozy underwater social sim where you befriend sea creatures and help restore the ocean. Catch drifting plastic, assist in conservation, and build homes for aquatic friends in an open-ended, peaceful world.",
             "status": "in-development",
             "releaseDate": "N/A",
-            "platforms": ["PC", "Steam"],
             "images": ["beneaththewaves_logo.png"],
             "trailerUrl": "",
             "downloadLinks": {},
-            "tags": ["indie", "social-sim", "cozy", "conservation", "underwater", "upcoming"],
-            "genre": "Social Simulator",
-            "features": ["Ocean conservation", "Befriend sea creatures", "Cozy gameplay", "Environmental themes"]
-        },
-        {
-            "id": "themindgap",
-            "title": "The Mind Gap",
-            "description": "A hypercasual, logic puzzle mobile game with comics and drag-and-drop play",
-            "status": "in-development",
-            "releaseDate": "N/A",
-            "platforms": ["Mobile", "Android", "iOS"],
-            "images": ["themindgap_logo.png"],
-            "trailerUrl": "",
-            "downloadLinks": {},
-            "tags": ["mobile", "puzzle", "hypercasual", "logic", "comics"],
-            "genre": "Logic Puzzle",
-            "features": ["Drag-and-drop gameplay", "Comic book style", "Logic puzzles", "Mobile-optimized"]
+            "genre": "Social Simulator"
         }
     ],
     "expansions": []
