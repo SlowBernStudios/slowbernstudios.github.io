@@ -27,28 +27,7 @@ class GameManager {
                     <h3>${game.title}</h3>
                     <div class="game-genre">${game.genre}</div>
                     <p>${game.description}</p>
-                    
-                    ${game.features ? `
-                        <div class="game-features">
-                            <h4>Key Features:</h4>
-                            <div class="feature-list">
-                                ${game.features.map(feature => `<span class="feature">${feature}</span>`).join('')}
-                            </div>
-                        </div>
-                    ` : ''}
-                    
-                    <div class="game-tags">
-                        ${game.tags.map(tag => `<span class="tag ${tag}">${tag}</span>`).join('')}
-                    </div>
-                    
-                    <div class="game-platforms">
-                        <strong>Platforms:</strong> ${game.platforms.join(', ')}
-                    </div>
-                    
-                    <div class="game-links">
-                        ${this.createDownloadLinks(game.downloadLinks)}
-                        <a href="pages/games/${game.id}.html" class="download-link info">Learn More</a>
-                    </div>
+
                 </div>
             </div>
         `;

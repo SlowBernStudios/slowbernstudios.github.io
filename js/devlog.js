@@ -23,7 +23,6 @@ class DevlogManager {
                 <div class="news-header">
                     <h3>${news.title}</h3>
                     <div class="news-meta">
-                        <span class="date">${this.formatDate(news.date)}</span>
                         <span class="category ${news.category}">${news.category}</span>
                     </div>
                 </div>
