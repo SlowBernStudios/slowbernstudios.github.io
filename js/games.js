@@ -18,7 +18,7 @@ class GameManager {
 
     createGameCard(game) {
         return `
-            <div class="game-card" data-tags="${game.tags.join(',')}" data-status="${game.status}" data-genre="${game.genre.toLowerCase().replace(/[^a-z0-9]/g, '-')}">
+            <div class="game-card" data-status="${game.status}" data-genre="${game.genre.toLowerCase().replace(/[^a-z0-9]/g, '-')}">
                 <div class="game-image">
                     <img src="assets/images/games/${game.id}/${game.images[0]}" alt="${game.title}" loading="lazy">
                 </div>
