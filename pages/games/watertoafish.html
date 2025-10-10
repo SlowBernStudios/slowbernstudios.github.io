@@ -32,7 +32,12 @@
 </main>
 
 <footer>
-    <p>&copy; 2025 Slowbern Studios. All rights reserved.</p>
+    <p>&copy; 2025 Slowbern Studios. All rights reserved. &middot;
+        <a href="../../privacy.html">Privacy</a> &middot;
+        <a href="../../terms.html">Terms</a> &middot;
+        <a href="../../cookies.html">Cookies</a> &middot;
+        <a href="../../disclaimer.html">Disclaimer</a>
+    </p>
 </footer>
 
 <script src="../../js/data/games-data.js"></script>
@@ -42,33 +47,58 @@
         const gameId = 'watertoafish';
         const game = gamesData.current.find(g => g.id === gameId);
 
-        if (game) {
-            document.getElementById('game-content').innerHTML = `
-                    <header class="game-header">
-                        <h1>${game.title}</h1>
-                        <div class="game-meta">
-                            <span class="release-date">Released: ${game.releaseDate}</span>
-                            <div class="platforms">
-                                ${game.platforms.map(platform => `<span class="platform">${platform}</span>`).join('')}
-                            </div>
-                        </div>
-                    </header>
-                    
-                    <div class="game-gallery">
-                        ${game.images.map(image => `
-                            <img src="../../assets/images/games/${game.id}/${image}" alt="${game.title} Screenshot">
-                        `).join('')}
-                    </div>
-                    
-                    <div class="game-description">
-                        <h2>About the Game</h2>
-                        <p>${game.description}</p>
-                    </div>
-                `;
-
-            const metaManager = new MetaManager();
-            metaManager.updatePageMeta(game);
+        if (!game) {
+            document.getElementById('game-content').innerHTML = '<p class="card">Game data is unavailable.</p>';
+            return;
         }
+
+        const platforms = Array.isArray(game.platforms) && game.platforms.length ? game.platforms : ['TBD'];
+        const images = Array.isArray(game.images) && game.images.length ? game.images : [];
+        const featuresMarkup = Array.isArray(game.features) && game.features.length
+            ? '<section class="game-features"><h2>Key Features</h2><div class="feature-list">' + game.features.map(function(feature) {
+                return '<span class="feature">' + feature + '</span>';
+            }).join('') + '</div></section>'
+            : '';
+        const tagsMarkup = Array.isArray(game.tags) && game.tags.length
+            ? '<div class="game-tags">' + game.tags.map(function(tag) {
+                return '<span class="tag">' + tag + '</span>';
+            }).join('') + '</div>'
+            : '';
+        const releaseLabel = game.status === 'released' && game.releaseDate && game.releaseDate !== 'TBD'
+            ? 'Released: ' + game.releaseDate
+            : 'Expected: ' + (game.releaseDate || 'TBD');
+        const platformItems = platforms.map(function(platform) {
+            return '<span class="platform">' + platform + '</span>';
+        }).join('');
+        const galleryItems = images.length
+            ? images.map(function(image) {
+                return '<img src="../../assets/images/games/' + game.id + '/' + image + '" alt="' + game.title + ' Screenshot">';
+            }).join('')
+            : '<p class="card">Screenshots coming soon.</p>';
+
+        document.getElementById('game-content').innerHTML = `
+            <header class="game-header">
+                <h1>${game.title}</h1>
+                <div class="game-meta">
+                    <span class="release-date">${releaseLabel}</span>
+                    <div class="platforms">${platformItems}</div>
+                </div>
+            </header>
+
+            <div class="game-gallery">
+                ${galleryItems}
+            </div>
+
+            <section class="game-description">
+                <h2>About the Game</h2>
+                <p>${game.description}</p>
+            </section>
+            ${featuresMarkup}
+            ${tagsMarkup}
+        `;
+
+        const metaManager = new MetaManager();
+        metaManager.updatePageMeta(game);
     });
 </script>
 </body>

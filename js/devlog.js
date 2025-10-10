@@ -66,8 +66,3 @@ class DevlogManager {
         });
     }
 }
-
-// Initialize the DevlogManager when the page loads
-document.addEventListener('DOMContentLoaded', function() {
-    new DevlogManager();
-});
