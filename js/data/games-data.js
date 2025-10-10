@@ -54,24 +54,6 @@ const gamesData = {
             "images": ["beneaththewaves_keyart.svg", "beneaththewaves_sanctuary.svg"],
             "trailerUrl": "",
             "downloadLinks": {}
-        },
-        {
-            "id": "themindgap",
-            "title": "The Mind Gap",
-            "description": "A surreal narrative adventure where you bridge memories for patients exploring the space between waking life and dreams. Stitch together abstract scenes, decode symbolism, and guide each traveller back home.",
-            "status": "in-development",
-            "releaseDate": "TBD",
-            "genre": "Narrative Adventure",
-            "platforms": ["PC"],
-            "tags": ["pc", "narrative", "adventure", "puzzle", "in-development"],
-            "features": [
-                "Mindscape exploration with shifting gravity",
-                "Dialogue puzzles that interpret dream logic",
-                "Branching conclusions based on emotional insight"
-            ],
-            "images": ["themindgap_keyart.svg", "themindgap_memory.svg"],
-            "trailerUrl": "",
-            "downloadLinks": {}
         }
     ],
     "expansions": []
