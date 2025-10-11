@@ -1,0 +1,17 @@
+{
+  "id": "docks_crate",
+  "text": "A floating crate bumps the pier. Inside: wet napkins, a thermos, and a note that says 'for whoever keeps the soup warm'.",
+  "choices": [
+    {
+      "label": "Take the thermos (+water)",
+      "to": "docks_crate_end",
+      "effects": { "ingredients": "+water", "reputation": "+1" }
+    },
+    {
+      "label": "Leave it for the next stranger",
+      "to": "docks_crate_end",
+      "effects": { "morale": "+1" }
+    }
+  ]
+}
+

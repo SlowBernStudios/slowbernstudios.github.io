@@ -1,0 +1,23 @@
+{
+  "id": "city_pothole",
+  "text": "Your front wheel dips into a crater. A couple of bystanders brace the truck while you ease it out. 'Payment?' one jokes, then grins.",
+  "choices": [
+    {
+      "label": "Serve soup to the helpers",
+      "to": "city_pothole_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "reputation": "+2", "morale": "+1" }
+    },
+    {
+      "label": "Offer bread and thanks",
+      "to": "city_pothole_end",
+      "effects": { "morale": "+1" }
+    },
+    {
+      "label": "Drive off with a wave",
+      "to": "city_pothole_end",
+      "effects": { "reputation": "-1" }
+    }
+  ]
+}
+

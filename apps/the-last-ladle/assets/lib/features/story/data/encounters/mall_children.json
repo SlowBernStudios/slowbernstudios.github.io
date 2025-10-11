@@ -1,0 +1,23 @@
+{
+  "id": "mall_children",
+  "text": "Two kids wave from a kiosk, trading broken toys for anything warm. One insists the toy robot still works if you squint.",
+  "choices": [
+    {
+      "label": "Trade soup for the robot",
+      "to": "mall_children_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+1", "reputation": "+1" }
+    },
+    {
+      "label": "Give water and a napkin cape",
+      "to": "mall_children_end",
+      "effects": { "ingredients": "-water", "morale": "+0", "reputation": "+0" }
+    },
+    {
+      "label": "Tell them to go home (where?)",
+      "to": "mall_children_end",
+      "effects": { "morale": "-1", "reputation": "-1" }
+    }
+  ]
+}
+

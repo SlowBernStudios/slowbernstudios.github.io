@@ -1,0 +1,18 @@
+{
+  "id": "overpass_mechanic",
+  "text": "Under the overpass, a grease-smeared mechanic waves a socket wrench. 'Your idle sounds thirsty.'",
+  "choices": [
+    {
+      "label": "Trade soup for tune-up (+1 fuel)",
+      "to": "overpass_mechanic_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "fuel": "+1" }
+    },
+    {
+      "label": "Ask for tips, keep moving",
+      "to": "overpass_mechanic_end",
+      "effects": { "reputation": "+0" }
+    }
+  ]
+}
+

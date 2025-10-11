@@ -1,0 +1,22 @@
+{
+  "id": "prologue_intro",
+  "text": "You ease the truck into idle. Rain taps the counter. A figure approaches the hatch, eyes tired but kind. They ask if you're open. The radio hisses a soft, stubborn hum.",
+  "choices": [
+    {
+      "label": "Serve a small bowl - on the house",
+      "to": "prologue_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+1", "reputation": "+1" }
+    },
+    {
+      "label": "Offer water and a joke",
+      "to": "prologue_end",
+      "effects": { "ingredients": "-water", "morale": "+0", "reputation": "+0" }
+    },
+    {
+      "label": "Close the hatch. Drive on.",
+      "to": "bridge_oldman",
+      "effects": { "morale": "-1" }
+    }
+  ]
+}

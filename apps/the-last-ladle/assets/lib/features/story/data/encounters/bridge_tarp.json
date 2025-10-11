@@ -1,0 +1,18 @@
+{
+  "id": "bridge_tarp",
+  "text": "A blue tarp snaps in the wind. Hands emerge, waving empty cups. The river below mutters like a stomach.",
+  "choices": [
+    {
+      "label": "Serve rounds until the pot cools (1 bowl)",
+      "to": "bridge_tarp_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": {"ingredients": "-broth", "morale": "+2", "reputation": "+1"}
+    },
+    {
+      "label": "Offer water and napkins",
+      "to": "bridge_tarp_end",
+      "effects": {"ingredients": "-water", "morale": "+0"}
+    }
+  ]
+}
+

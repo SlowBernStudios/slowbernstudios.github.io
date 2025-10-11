@@ -1,0 +1,24 @@
+{
+  "id": "city_paramedic",
+  "text": "A paramedic in a faded vest jogs alongside. 'Hot water for a thermos? The line at triage is long today.'",
+  "choices": [
+    {
+      "label": "Fill the thermos",
+      "to": "city_paramedic_end",
+      "condition": "ingredients.contains('water')",
+      "effects": { "ingredients": "-water", "reputation": "+2" }
+    },
+    {
+      "label": "Offer soup to the paramedic",
+      "to": "city_paramedic_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+1" }
+    },
+    {
+      "label": "Apologize and keep moving",
+      "to": "city_paramedic_end",
+      "effects": { "reputation": "-1" }
+    }
+  ]
+}
+

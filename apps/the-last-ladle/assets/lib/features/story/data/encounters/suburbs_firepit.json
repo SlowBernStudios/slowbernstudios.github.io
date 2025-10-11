@@ -1,0 +1,24 @@
+{
+  "id": "suburbs_firepit",
+  "text": "Neighbors circle a firepit made from a wheelbarrow. Someone passes a dented mug of something almost like cocoa.",
+  "choices": [
+    {
+      "label": "Share your spices (+morale)",
+      "to": "suburbs_firepit_end",
+      "condition": "ingredients.contains('spices')",
+      "effects": { "ingredients": "-spices", "morale": "+2" }
+    },
+    {
+      "label": "Serve a round of soup",
+      "to": "suburbs_firepit_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "reputation": "+1" }
+    },
+    {
+      "label": "Decline and warm your hands",
+      "to": "suburbs_firepit_end",
+      "effects": { "morale": "+0" }
+    }
+  ]
+}
+

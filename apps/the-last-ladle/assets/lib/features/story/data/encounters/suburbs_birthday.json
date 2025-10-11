@@ -1,0 +1,18 @@
+{
+  "id": "suburbs_birthday",
+  "text": "A kid in a paper crown peers over the counter. 'It's my birthday. Do you do candles on soup?'",
+  "choices": [
+    {
+      "label": "Tiny candle, tiny bowl",
+      "to": "suburbs_birthday_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+2" }
+    },
+    {
+      "label": "Bread slice with a drawn candle",
+      "to": "suburbs_birthday_end",
+      "effects": { "morale": "+1" }
+    }
+  ]
+}
+

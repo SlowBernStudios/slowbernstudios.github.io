@@ -1,0 +1,22 @@
+{
+  "id": "bridge_toll",
+  "text": "A makeshift toll: a shopping cart chained across the lane. Two teens in ponchos ask for a toll - a joke, they say, unless?",
+  "choices": [
+    {
+      "label": "Pay in spices (-spices, +rep)",
+      "to": "bridge_toll_end",
+      "condition": "ingredients.contains('spices')",
+      "effects": { "ingredients": "-spices", "reputation": "+1" }
+    },
+    {
+      "label": "Give them hot water and stories",
+      "to": "bridge_toll_end",
+      "effects": { "ingredients": "-water", "morale": "+1" }
+    },
+    {
+      "label": "Drive around (scrapes paint, -1 fuel)",
+      "to": "bridge_toll_end",
+      "effects": { "fuel": "-1", "reputation": "-1" }
+    }
+  ]
+}

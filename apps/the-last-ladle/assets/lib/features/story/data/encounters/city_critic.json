@@ -1,0 +1,25 @@
+﻿{
+  "id": "city_critic",
+  "text": "A food critic in a raincoat produces a notepad. 'Survival is no excuse for blandness.' They sniff theatrically at your steam.",
+  "choices": [
+    {
+      "label": "Serve boldly seasoned bowl",
+      "to": "city_critic_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth,-spices", "reputation": "+2", "morale": "+1" }
+    },
+    {
+      "label": "Serve simple broth",
+      "to": "city_critic_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "reputation": "+0" }
+    },
+    {
+      "label": "Decline the review",
+      "to": "city_critic_end",
+      "effects": { "reputation": "-1" }
+    }
+  ]
+}
+
+

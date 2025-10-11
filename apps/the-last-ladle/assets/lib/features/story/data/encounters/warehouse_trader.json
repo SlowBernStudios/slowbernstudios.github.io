@@ -1,0 +1,23 @@
+{
+  "id": "warehouse_trader",
+  "text": "A trader leans on a pallet jack in a flooded warehouse. 'Fuel for beans?' Their smile is mostly math.",
+  "choices": [
+    {
+      "label": "Trade beans for fuel (+2 fuel)",
+      "to": "warehouse_trader_end",
+      "condition": "ingredients.contains('beans')",
+      "effects": { "ingredients": "-beans", "fuel": "+2", "reputation": "+1" }
+    },
+    {
+      "label": "Decline politely",
+      "to": "warehouse_trader_end",
+      "effects": { "reputation": "+0" }
+    },
+    {
+      "label": "Haggle hard (-1 rep, +1 fuel)",
+      "to": "warehouse_trader_end",
+      "effects": { "reputation": "-1", "fuel": "+1" }
+    }
+  ]
+}
+

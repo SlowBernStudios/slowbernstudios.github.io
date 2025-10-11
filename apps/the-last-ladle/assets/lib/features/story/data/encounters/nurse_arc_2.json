@@ -1,0 +1,20 @@
+{
+  "id": "nurse_arc_2",
+  "regularId": "nurse",
+  "preferredCombo": "beans",
+  "text": "The nurse meets you by the loading dock. 'Yesterday helped. Today is heavier.' They glance at your pot with tired eyes.",
+  "choices": [
+    {
+      "label": "Serve beans for strength",
+      "to": "nurse_arc_2_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+1", "reputation": "+1" }
+    },
+    {
+      "label": "Offer water and a rest note",
+      "to": "nurse_arc_2_end",
+      "effects": { "reputation": "+0" }
+    }
+  ]
+}
+

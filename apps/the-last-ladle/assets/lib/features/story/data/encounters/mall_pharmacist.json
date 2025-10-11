@@ -1,0 +1,24 @@
+{
+  "id": "mall_pharmacist",
+  "text": "A former pharmacist has set up at a cosmetics counter. They need hot water to mix makeshift remedies.",
+  "choices": [
+    {
+      "label": "Provide hot water",
+      "to": "mall_pharmacist_end",
+      "condition": "ingredients.contains('water')",
+      "effects": { "ingredients": "-water", "reputation": "+1" }
+    },
+    {
+      "label": "Offer soup instead",
+      "to": "mall_pharmacist_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+1" }
+    },
+    {
+      "label": "Wish them luck and go",
+      "to": "mall_pharmacist_end",
+      "effects": { "morale": "-1" }
+    }
+  ]
+}
+

@@ -1,0 +1,20 @@
+{
+  "id": "mechanic_arc_2",
+  "regularId": "mechanic",
+  "preferredCombo": "beans",
+  "text": "The mechanic flags you under the overpass. 'Got your idle whispering now. Think the soup can match?'",
+  "choices": [
+    {
+      "label": "Serve hearty bean broth",
+      "to": "mechanic_arc_2_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "reputation": "+1", "morale": "+1" }
+    },
+    {
+      "label": "Share bread and tips",
+      "to": "mechanic_arc_2_end",
+      "effects": { "reputation": "+0" }
+    }
+  ]
+}
+

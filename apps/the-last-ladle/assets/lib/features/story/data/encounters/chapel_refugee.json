@@ -1,0 +1,17 @@
+{
+  "id": "chapel_refugee",
+  "text": "A traveler sits in the last pew, backpack a pillow, fear a blanket. They ask if faith can taste like soup.",
+  "choices": [
+    {
+      "label": "Yes - serve a quiet bowl",
+      "to": "chapel_refugee_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+2" }
+    },
+    {
+      "label": "Offer water and a map",
+      "to": "chapel_refugee_end",
+      "effects": { "ingredients": "-water", "reputation": "+1" }
+    }
+  ]
+}

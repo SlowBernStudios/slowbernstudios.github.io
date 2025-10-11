@@ -1,0 +1,22 @@
+{
+  "id": "docks_fisher",
+  "text": "A fisher in a yellow slicker holds up a tin of something that used to be sardines. 'Trade? I'm tired of salt.'",
+  "choices": [
+    {
+      "label": "Swap soup for the tin (+fuel? no, +spices)",
+      "to": "docks_fisher_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth,+spices", "reputation": "+1" }
+    },
+    {
+      "label": "Offer bread and a joke",
+      "to": "docks_fisher_end",
+      "effects": { "morale": "+1" }
+    },
+    {
+      "label": "Decline - you already smell like the river",
+      "to": "docks_fisher_end",
+      "effects": { "reputation": "-1" }
+    }
+  ]
+}

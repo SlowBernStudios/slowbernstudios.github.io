@@ -1,0 +1,17 @@
+{
+  "id": "chapel_choir",
+  "text": "A small choir practices under the eaves, harmonies carrying in the drizzle. They ask if you take requests - for songs or soups.",
+  "choices": [
+    {
+      "label": "Soup for a song",
+      "to": "chapel_choir_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+2" }
+    },
+    {
+      "label": "Clap along and leave bread",
+      "to": "chapel_choir_end",
+      "effects": { "morale": "+1", "reputation": "+1" }
+    }
+  ]
+}

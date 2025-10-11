@@ -1,0 +1,24 @@
+{
+  "id": "bridge_poet",
+  "regularId": "poet",
+  "preferredCombo": "spices",
+  "text": "A poet chalks verses on the damp concrete, words bleeding into puddles. They ask if soup can be a stanza.",
+  "choices": [
+    {
+      "label": "Trade soup for a poem",
+      "to": "bridge_poet_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+1", "reputation": "+1" }
+    },
+    {
+      "label": "Offer bread and a line",
+      "to": "bridge_poet_end",
+      "effects": { "morale": "+0", "reputation": "+0" }
+    },
+    {
+      "label": "Quote a bad haiku (drive on)",
+      "to": "bridge_poet_end",
+      "effects": { "morale": "-1" }
+    }
+  ]
+}

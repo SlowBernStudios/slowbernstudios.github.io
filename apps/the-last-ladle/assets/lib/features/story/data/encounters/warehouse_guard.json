@@ -1,0 +1,23 @@
+{
+  "id": "warehouse_guard",
+  "text": "A guard peers over a pallet wall. 'Private inventory. You can serve from there, not in here.' They point to a loading bay curb.",
+  "choices": [
+    {
+      "label": "Serve from the curb (comply)",
+      "to": "warehouse_guard_end",
+      "effects": { "reputation": "+1" }
+    },
+    {
+      "label": "Offer soup to the guard",
+      "to": "warehouse_guard_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+1" }
+    },
+    {
+      "label": "Ignore and drive on",
+      "to": "warehouse_guard_end",
+      "effects": { "reputation": "-1" }
+    }
+  ]
+}
+

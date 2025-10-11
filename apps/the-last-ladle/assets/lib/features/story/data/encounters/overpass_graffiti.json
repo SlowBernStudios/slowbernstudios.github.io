@@ -1,0 +1,22 @@
+{
+  "id": "overpass_graffiti",
+  "text": "Fresh paint on old concrete: 'FEED EACH OTHER'. A teenager with paint-splattered sleeves asks if they can decorate your truck.",
+  "choices": [
+    {
+      "label": "Yes - new colors for the road (+rep)",
+      "to": "overpass_graffiti_end",
+      "effects": { "reputation": "+1" }
+    },
+    {
+      "label": "Only if they help serve",
+      "to": "overpass_graffiti_end",
+      "condition": "morale >= 0",
+      "effects": { "morale": "+1", "reputation": "+1" }
+    },
+    {
+      "label": "No - keep it plain",
+      "to": "overpass_graffiti_end",
+      "effects": { "reputation": "-1" }
+    }
+  ]
+}

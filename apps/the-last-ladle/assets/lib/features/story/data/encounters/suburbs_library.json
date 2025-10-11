@@ -1,0 +1,23 @@
+{
+  "id": "suburbs_library",
+  "text": "The branch library is a shelter now. A volunteer asks if you can spare a little warmth for the late readers.",
+  "choices": [
+    {
+      "label": "Soup for story hour",
+      "to": "suburbs_library_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+2" }
+    },
+    {
+      "label": "Swap a bookmark for bread",
+      "to": "suburbs_library_end",
+      "effects": { "morale": "+1" }
+    },
+    {
+      "label": "Promise to return tomorrow",
+      "to": "suburbs_library_end",
+      "effects": { "reputation": "+0" }
+    }
+  ]
+}
+

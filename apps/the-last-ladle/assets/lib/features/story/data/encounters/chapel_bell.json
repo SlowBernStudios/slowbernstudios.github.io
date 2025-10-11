@@ -1,0 +1,18 @@
+{
+  "id": "chapel_bell",
+  "text": "The bell rope is frayed but faithful. A caretaker asks if you can spare warmth for those who come to ring it.",
+  "choices": [
+    {
+      "label": "Soup by the steps",
+      "to": "chapel_bell_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "reputation": "+1", "morale": "+1" }
+    },
+    {
+      "label": "Leave candles and go",
+      "to": "chapel_bell_end",
+      "effects": { "morale": "+0" }
+    }
+  ]
+}
+

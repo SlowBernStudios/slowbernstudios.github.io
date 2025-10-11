@@ -1,0 +1,17 @@
+{
+  "id": "hospital_orderly",
+  "text": "An orderly with a stack of blankets asks softly, 'Any spare bread? Patients prefer something to hold.'",
+  "choices": [
+    {
+      "label": "Give bread from the hatch",
+      "to": "hospital_orderly_end",
+      "effects": { "ingredients": "-bread", "reputation": "+1" }
+    },
+    {
+      "label": "Offer hot water instead",
+      "to": "hospital_orderly_end",
+      "effects": { "ingredients": "-water", "reputation": "+0" }
+    }
+  ]
+}
+

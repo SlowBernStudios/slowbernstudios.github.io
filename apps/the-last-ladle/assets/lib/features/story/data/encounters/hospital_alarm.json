@@ -1,0 +1,18 @@
+{
+  "id": "hospital_alarm",
+  "text": "An alarm chirps. A voice calls codes you don't know. A volunteer waves you to hold in place or move on fast.",
+  "choices": [
+    {
+      "label": "Hold position, offer soup to volunteers",
+      "to": "hospital_alarm_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+1", "reputation": "+1" }
+    },
+    {
+      "label": "Move on fast (burn fuel)",
+      "to": "hospital_alarm_end",
+      "effects": { "fuel": "-1", "reputation": "-1" }
+    }
+  ]
+}
+

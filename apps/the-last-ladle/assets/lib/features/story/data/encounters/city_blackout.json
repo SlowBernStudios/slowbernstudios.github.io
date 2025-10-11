@@ -1,0 +1,22 @@
+{
+  "id": "city_blackout",
+  "text": "The core is dark. People gather around a single lantern. A woman asks if you have anything warm - 'for the little ones'.",
+  "choices": [
+    {
+      "label": "Serve a round of small bowls",
+      "to": "city_blackout_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+2", "reputation": "+1" }
+    },
+    {
+      "label": "Play a radio lullaby",
+      "to": "city_blackout_end",
+      "effects": { "morale": "+1" }
+    },
+    {
+      "label": "Move on quietly",
+      "to": "city_blackout_end",
+      "effects": { "morale": "-1", "reputation": "-1" }
+    }
+  ]
+}

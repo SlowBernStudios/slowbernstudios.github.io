@@ -1,0 +1,22 @@
+{
+  "id": "hospital_line",
+  "text": "A line forms down the hall, paper bracelets rustling. Someone asks if you'll be here tomorrow too.",
+  "choices": [
+    {
+      "label": "Yes - and the day after",
+      "to": "hospital_line_end",
+      "effects": { "reputation": "+1" }
+    },
+    {
+      "label": "Serve a small round now",
+      "to": "hospital_line_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+1" }
+    },
+    {
+      "label": "Shake your head",
+      "to": "hospital_line_end",
+      "effects": { "morale": "-1", "reputation": "-1" }
+    }
+  ]
+}

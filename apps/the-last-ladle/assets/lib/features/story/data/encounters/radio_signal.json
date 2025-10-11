@@ -1,0 +1,22 @@
+{
+  "id": "radio_signal",
+  "text": "The radio locks onto a voice: a recipe read like prayer. 'Beans, water, patience.' The signal fades, then returns with a laugh.",
+  "choices": [
+    {
+      "label": "Answer with your own recipe",
+      "to": "radio_signal_end",
+      "effects": { "morale": "+1", "reputation": "+1" }
+    },
+    {
+      "label": "Stay silent, just listen",
+      "to": "radio_signal_end",
+      "effects": { "morale": "+0" }
+    },
+    {
+      "label": "Change the station, chase static",
+      "to": "radio_signal_end",
+      "effects": { "morale": "-1" }
+    }
+  ]
+}
+

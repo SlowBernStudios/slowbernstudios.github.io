@@ -1,0 +1,23 @@
+{
+  "id": "scrapyard_dog",
+  "text": "A dog with a license plate collar trots beside the truck. It sits. It stares. It is very persuasive.",
+  "choices": [
+    {
+      "label": "Share bread (+morale)",
+      "to": "scrapyard_dog_end",
+      "effects": { "morale": "+1" }
+    },
+    {
+      "label": "Offer soup (if any left)",
+      "to": "scrapyard_dog_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+2" }
+    },
+    {
+      "label": "Teach it to guard the truck",
+      "to": "scrapyard_dog_end",
+      "effects": { "reputation": "+1" }
+    }
+  ]
+}
+

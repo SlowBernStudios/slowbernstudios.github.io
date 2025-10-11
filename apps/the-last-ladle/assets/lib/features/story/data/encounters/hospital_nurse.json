@@ -1,0 +1,25 @@
+{
+  "id": "hospital_nurse",
+  "regularId": "nurse",
+  "preferredCombo": "beans",
+  "text": "A nurse in faded scrubs counts bandages like prayer beads. 'Hot water helps. So does kindness.'",
+  "choices": [
+    {
+      "label": "Provide hot water and bread",
+      "to": "hospital_nurse_end",
+      "condition": "ingredients.contains('water')",
+      "effects": { "ingredients": "-water", "reputation": "+1", "morale": "+1" }
+    },
+    {
+      "label": "Serve soup to the waiting room",
+      "to": "hospital_nurse_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+2" }
+    },
+    {
+      "label": "Leave extra napkins",
+      "to": "hospital_nurse_end",
+      "effects": { "reputation": "+0" }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "city_shakedown",
+  "text": "Two teens in scavenged jackets lean into your service window. 'Protection soup,' one says. 'For safe passage.' The other eyes your ladle.",
+  "choices": [
+    {
+      "label": "Give a small bowl and a warning",
+      "to": "city_shakedown_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "reputation": "+1" }
+    },
+    {
+      "label": "Negotiate: help watch the truck instead",
+      "to": "city_shakedown_end",
+      "effects": { "reputation": "+1" }
+    },
+    {
+      "label": "Close the hatch and roll on",
+      "to": "city_shakedown_end",
+      "effects": { "reputation": "-1", "morale": "-1" }
+    }
+  ]
+}
+

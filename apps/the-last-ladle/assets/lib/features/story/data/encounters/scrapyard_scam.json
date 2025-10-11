@@ -1,0 +1,23 @@
+{
+  "id": "scrapyard_scam",
+  "text": "A man produces a laminated card: 'Soup Permit'. The lamination bubbles like a lie. 'Mandatory,' he says, not meeting your eyes.",
+  "choices": [
+    {
+      "label": "Pay in bread and move on",
+      "to": "scrapyard_scam_end",
+      "effects": { "ingredients": "-bread", "reputation": "-1" }
+    },
+    {
+      "label": "Call the bluff",
+      "to": "scrapyard_scam_end",
+      "effects": { "reputation": "+1" }
+    },
+    {
+      "label": "Offer soup anyway (no permit needed)",
+      "to": "scrapyard_scam_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+1" }
+    }
+  ]
+}
+

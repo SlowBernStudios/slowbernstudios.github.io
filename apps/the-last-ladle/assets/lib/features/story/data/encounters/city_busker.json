@@ -1,0 +1,23 @@
+{
+  "id": "city_busker",
+  "text": "A busker strums a warped guitar, case full of bottle caps. They ask if you take requests. For songs or soups.",
+  "choices": [
+    {
+      "label": "Trade soup for a song",
+      "to": "city_busker_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+1" }
+    },
+    {
+      "label": "Offer bread and a chorus",
+      "to": "city_busker_end",
+      "effects": { "morale": "+1", "reputation": "+1" }
+    },
+    {
+      "label": "Nod along, move along",
+      "to": "city_busker_end",
+      "effects": { "morale": "-1" }
+    }
+  ]
+}
+

@@ -1,0 +1,20 @@
+{
+  "id": "poet_arc_3",
+  "regularId": "poet",
+  "preferredCombo": "spices",
+  "text": "Rain makes a metronome on the roof. The poet leaves a folded page at your hatch: a recipe that sounds like a prayer.",
+  "choices": [
+    {
+      "label": "Serve spiced broth and listen",
+      "to": "poet_arc_3_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+2", "reputation": "+1" }
+    },
+    {
+      "label": "Thank them and drive on",
+      "to": "poet_arc_3_end",
+      "effects": { "reputation": "+0" }
+    }
+  ]
+}
+

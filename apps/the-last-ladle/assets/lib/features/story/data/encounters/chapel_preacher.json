@@ -1,0 +1,18 @@
+{
+  "id": "chapel_preacher",
+  "text": "A preacher with a thermos quotes something kind about loaves. They ask if grace can be poured.",
+  "choices": [
+    {
+      "label": "Share soup and a quiet amen",
+      "to": "chapel_preacher_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+2" }
+    },
+    {
+      "label": "Offer water and a smile",
+      "to": "chapel_preacher_end",
+      "effects": { "ingredients": "-water", "reputation": "+0" }
+    }
+  ]
+}
+

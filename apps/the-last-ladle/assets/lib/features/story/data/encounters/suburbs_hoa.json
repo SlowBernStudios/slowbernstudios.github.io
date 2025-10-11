@@ -1,0 +1,23 @@
+{
+  "id": "suburbs_hoa",
+  "text": "A man in a blazer waves a clipboard. 'This cul-de-sac has regulations.' He eyes your truck's hand-painted logo.",
+  "choices": [
+    {
+      "label": "Pay the 'fine' with a bowl",
+      "to": "suburbs_hoa_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "reputation": "+0" }
+    },
+    {
+      "label": "Crack a joke and offer bread",
+      "to": "suburbs_hoa_end",
+      "effects": { "morale": "+1" }
+    },
+    {
+      "label": "Ignore him and serve the neighbors",
+      "to": "suburbs_hoa_end",
+      "effects": { "reputation": "+1" }
+    }
+  ]
+}
+

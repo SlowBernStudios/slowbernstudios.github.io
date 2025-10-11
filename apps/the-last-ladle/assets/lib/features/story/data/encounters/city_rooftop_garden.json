@@ -1,0 +1,17 @@
+{
+  "id": "city_rooftop_garden",
+  "text": "On a rooftop, a stubborn garden lives. A caretaker offers herbs in exchange for a bowl and a weather report.",
+  "choices": [
+    {
+      "label": "Trade soup for herbs (+spices)",
+      "to": "city_rooftop_garden_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth,+spices", "morale": "+1" }
+    },
+    {
+      "label": "Share the forecast, keep the soup",
+      "to": "city_rooftop_garden_end",
+      "effects": { "reputation": "+1" }
+    }
+  ]
+}

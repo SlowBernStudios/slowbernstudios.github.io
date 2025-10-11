@@ -1,0 +1,23 @@
+{
+  "id": "docks_storm",
+  "text": "Stormfront pushes in. A line of figures huddles under the awning. One voice asks for anything warm, another for a story where it ends okay.",
+  "choices": [
+    {
+      "label": "Serve what you can",
+      "to": "docks_storm_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+2", "reputation": "+1" }
+    },
+    {
+      "label": "Tell the story first",
+      "to": "docks_storm_end",
+      "effects": { "morale": "+1" }
+    },
+    {
+      "label": "Drive inland before it hits (-1 fuel)",
+      "to": "docks_storm_end",
+      "effects": { "fuel": "-1", "reputation": "-1" }
+    }
+  ]
+}
+

@@ -1,0 +1,19 @@
+{
+  "id": "scrapyard_mechanic",
+  "regularId": "mechanic",
+  "preferredCombo": "beans",
+  "text": "A mechanic welds kindness into junk. They eye your axle and your empty eyes and offer a tune-up for a bowl.",
+  "choices": [
+    {
+      "label": "Trade soup for tune-up (+1 fuel)",
+      "to": "scrapyard_mechanic_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "fuel": "+1" }
+    },
+    {
+      "label": "Swap bread for advice",
+      "to": "scrapyard_mechanic_end",
+      "effects": { "reputation": "+1" }
+    }
+  ]
+}

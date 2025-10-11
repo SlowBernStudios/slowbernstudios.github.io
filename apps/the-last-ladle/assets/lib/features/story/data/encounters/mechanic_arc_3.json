@@ -1,0 +1,20 @@
+{
+  "id": "mechanic_arc_3",
+  "regularId": "mechanic",
+  "preferredCombo": "beans",
+  "text": "'Listen to that idle,' the mechanic grins. 'Now let me hear the soup.'",
+  "choices": [
+    {
+      "label": "Serve hearty bean broth",
+      "to": "mechanic_arc_3_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "reputation": "+1", "morale": "+2" }
+    },
+    {
+      "label": "Share bread and a laugh",
+      "to": "mechanic_arc_3_end",
+      "effects": { "reputation": "+0" }
+    }
+  ]
+}
+

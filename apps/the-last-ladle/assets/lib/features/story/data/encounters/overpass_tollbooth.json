@@ -1,0 +1,24 @@
+{
+  "id": "overpass_tollbooth",
+  "text": "A plastic barricade and a hand-painted sign: TOLL. A figure in a reflective poncho steps forward with a clipboard.",
+  "choices": [
+    {
+      "label": "Pay in spices (-spices, +rep)",
+      "to": "overpass_tollbooth_end",
+      "condition": "ingredients.contains('spices')",
+      "effects": { "ingredients": "-spices", "reputation": "+1" }
+    },
+    {
+      "label": "Offer hot water and a story",
+      "to": "overpass_tollbooth_end",
+      "condition": "ingredients.contains('water')",
+      "effects": { "ingredients": "-water", "morale": "+1" }
+    },
+    {
+      "label": "Refuse and turn around (-1 fuel)",
+      "to": "overpass_tollbooth_end",
+      "effects": { "fuel": "-1", "reputation": "-1" }
+    }
+  ]
+}
+

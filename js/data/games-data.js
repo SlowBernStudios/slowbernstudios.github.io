@@ -54,6 +54,24 @@ const gamesData = {
             "images": ["beneaththewaves_keyart.svg", "beneaththewaves_sanctuary.svg"],
             "trailerUrl": "",
             "downloadLinks": {}
+        },
+        {
+            "id": "thelastladle",
+            "title": "The Last Ladle",
+            "description": "A new project from Slowbern Studios. Details and web demo coming soon.",
+            "status": "in-development",
+            "releaseDate": "TBD",
+            "genre": "Cooking Simulator",
+            "platforms": ["Web", "PC"],
+            "tags": ["web", "simulation", "cozy", "in-development"],
+            "features": [
+                "Relaxed, session-friendly gameplay",
+                "Progression-focused systems",
+                "Stylized visuals"
+            ],
+            "images": ["thelastladle_keyart.svg", "thelastladle_logo.svg"],
+            "trailerUrl": "",
+            "downloadLinks": {}
         }
     ],
     "expansions": []

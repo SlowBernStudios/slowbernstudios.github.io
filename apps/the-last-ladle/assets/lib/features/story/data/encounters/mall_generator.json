@@ -1,0 +1,23 @@
+{
+  "id": "mall_generator",
+  "text": "Someone's coaxed a generator to life near the old arcade. The hum is hopeful, the air smells like melted plastic.",
+  "choices": [
+    {
+      "label": "Share water to cool the engine",
+      "to": "mall_generator_end",
+      "condition": "ingredients.contains('water')",
+      "effects": { "ingredients": "-water", "reputation": "+1" }
+    },
+    {
+      "label": "Offer soup to the mechanic",
+      "to": "mall_generator_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+1" }
+    },
+    {
+      "label": "Borrow a charge (-1 rep, +1 fuel)",
+      "to": "mall_generator_end",
+      "effects": { "reputation": "-1", "fuel": "+1" }
+    }
+  ]
+}

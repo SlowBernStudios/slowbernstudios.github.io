@@ -1,0 +1,18 @@
+{
+  "id": "bridge_conman",
+  "text": "A stranger offers a steaming jar: 'Coffee.' It smells like rainwater and instant bravado.",
+  "choices": [
+    {
+      "label": "Swap soup for the 'coffee' (regret it)",
+      "to": "bridge_conman_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": {"ingredients": "-broth", "morale": "-1"}
+    },
+    {
+      "label": "Decline politely",
+      "to": "bridge_conman_end",
+      "effects": {"reputation": "+0"}
+    }
+  ]
+}
+

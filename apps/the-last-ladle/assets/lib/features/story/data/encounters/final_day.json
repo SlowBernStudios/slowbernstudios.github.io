@@ -1,0 +1,18 @@
+{
+  "id": "final_day",
+  "text": "The pot is light. The road feels thin. Someone waits at a folding chair by the curb, an empty bowl between their hands.",
+  "choices": [
+    {
+      "label": "Serve the last bowl (if any)",
+      "to": "final_day_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+2", "reputation": "+1" }
+    },
+    {
+      "label": "Keep it for tomorrow",
+      "to": "final_day_end",
+      "effects": { "morale": "-2", "reputation": "-1" }
+    }
+  ]
+}
+

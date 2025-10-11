@@ -1,0 +1,23 @@
+{
+  "id": "overpass_family",
+  "text": "A family camps under the overpass. The smallest kid holds a ladle like a scepter. Their dad offers to fix your wiper for a bowl.",
+  "choices": [
+    {
+      "label": "Deal: one bowl for working wipers (+morale)",
+      "to": "overpass_family_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+2" }
+    },
+    {
+      "label": "Decline, leave extra napkins",
+      "to": "overpass_family_end",
+      "effects": { "reputation": "+0" }
+    },
+    {
+      "label": "Drive on"
+      , "to": "overpass_family_end"
+      , "effects": { "morale": "-1" }
+    }
+  ]
+}
+

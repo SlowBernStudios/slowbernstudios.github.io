@@ -1,0 +1,16 @@
+{
+  "id": "bridge_continue",
+  "text": "You roll past the billboard. The river is a sheet of cold tin. The radio stutters - a voice tries a word, then turns to static.",
+  "choices": [
+    {
+      "label": "Turn the dial, listen harder",
+      "to": "prologue_end",
+      "effects": { "morale": "+0", "reputation": "+0" }
+    },
+    {
+      "label": "Keep driving toward the city core",
+      "to": "prologue_intro",
+      "effects": { "fuel": "-1" }
+    }
+  ]
+}

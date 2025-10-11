@@ -1,0 +1,20 @@
+{
+  "id": "poet_arc_2",
+  "regularId": "poet",
+  "preferredCombo": "spices",
+  "text": "The poet returns with a damp notebook. 'Your steam made a stanza yesterday.' They ask if you can make the day rhyme again.",
+  "choices": [
+    {
+      "label": "Serve spiced broth",
+      "to": "poet_arc_2_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+1", "reputation": "+1" }
+    },
+    {
+      "label": "Offer bread and a line",
+      "to": "poet_arc_2_end",
+      "effects": { "reputation": "+0" }
+    }
+  ]
+}
+

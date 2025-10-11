@@ -1,0 +1,24 @@
+{
+  "id": "warehouse_forklift",
+  "text": "A forklift sits like a throne. The operator grins: 'Race you for a can of beans.'",
+  "choices": [
+    {
+      "label": "Race (you lose gracefully)",
+      "to": "warehouse_forklift_end",
+      "effects": { "morale": "+1" }
+    },
+    {
+      "label": "Wager spices for fuel",
+      "to": "warehouse_forklift_end",
+      "condition": "ingredients.contains('spices')",
+      "effects": { "ingredients": "-spices", "fuel": "+1" }
+    },
+    {
+      "label": "Offer soup as a peace prize",
+      "to": "warehouse_forklift_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "reputation": "+1" }
+    }
+  ]
+}
+

@@ -1,0 +1,18 @@
+{
+  "id": "docks_longshore",
+  "text": "A longshore worker in a reflective vest flags you down near a loading ramp. 'Shift just ended. Something warm?'",
+  "choices": [
+    {
+      "label": "Serve soup through the hatch",
+      "to": "docks_longshore_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+1" }
+    },
+    {
+      "label": "Trade bread for directions (shorter route)",
+      "to": "docks_longshore_end",
+      "effects": { "morale": "+0", "fuel": "+1" }
+    }
+  ]
+}
+

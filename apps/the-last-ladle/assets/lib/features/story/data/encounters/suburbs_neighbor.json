@@ -1,0 +1,22 @@
+{
+  "id": "suburbs_neighbor",
+  "text": "A neighbor recognizes your truck from before. They hand over a crumpled loyalty card - ten stamps, one free bowl - and a tired smile.",
+  "choices": [
+    {
+      "label": "Honor the card (free bowl)",
+      "to": "suburbs_neighbor_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+1", "reputation": "+1" }
+    },
+    {
+      "label": "Offer water and an apology",
+      "to": "suburbs_neighbor_end",
+      "effects": { "ingredients": "-water", "reputation": "+0" }
+    },
+    {
+      "label": "Refuse (the past is past)",
+      "to": "suburbs_neighbor_end",
+      "effects": { "reputation": "-1", "morale": "-1" }
+    }
+  ]
+}

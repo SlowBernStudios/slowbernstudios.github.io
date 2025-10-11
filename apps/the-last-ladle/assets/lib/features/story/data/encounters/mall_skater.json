@@ -1,0 +1,22 @@
+{
+  "id": "mall_skater",
+  "text": "A teen on a longboard rolls up, stops with a practiced heel drag. 'Soup-to-go?' they ask, breath fogging in the air.",
+  "choices": [
+    {
+      "label": "Serve a cup with a lid",
+      "to": "mall_skater_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "reputation": "+1" }
+    },
+    {
+      "label": "Offer bread - safer while riding",
+      "to": "mall_skater_end",
+      "effects": { "morale": "+1" }
+    },
+    {
+      "label": "Advise against hot soup while rolling",
+      "to": "mall_skater_end",
+      "effects": { "reputation": "-1" }
+    }
+  ]
+}

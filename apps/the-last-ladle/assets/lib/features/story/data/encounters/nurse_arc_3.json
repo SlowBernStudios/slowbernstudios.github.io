@@ -1,0 +1,20 @@
+{
+  "id": "nurse_arc_3",
+  "regularId": "nurse",
+  "preferredCombo": "beans",
+  "text": "The nurse leans on the rail. 'We kept a few more warm today.' Their hands stop shaking when you pass the bowl.",
+  "choices": [
+    {
+      "label": "Serve beans and a quiet thanks",
+      "to": "nurse_arc_3_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+2", "reputation": "+1" }
+    },
+    {
+      "label": "Leave bread and a note",
+      "to": "nurse_arc_3_end",
+      "effects": { "reputation": "+0" }
+    }
+  ]
+}
+

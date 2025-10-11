@@ -1,0 +1,18 @@
+{
+  "id": "city_linecook",
+  "text": "A former line cook taps the counter. 'I used to plate tasting menus. Now I trade herbs for heat.'",
+  "choices": [
+    {
+      "label": "Swap soup for herbs (+spices)",
+      "to": "city_linecook_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth,+spices", "reputation": "+1" }
+    },
+    {
+      "label": "Ask for seasoning tips",
+      "to": "city_linecook_end",
+      "effects": { "morale": "+1" }
+    }
+  ]
+}
+

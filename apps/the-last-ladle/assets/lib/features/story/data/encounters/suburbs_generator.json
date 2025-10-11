@@ -1,0 +1,18 @@
+{
+  "id": "suburbs_generator",
+  "text": "A neighbor wrestles with a sputtering generator in a driveway. 'Trade? A bowl for a splash of fuel.'",
+  "choices": [
+    {
+      "label": "Deal (+1 fuel, -broth)",
+      "to": "suburbs_generator_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "fuel": "+1", "reputation": "+1" }
+    },
+    {
+      "label": "Offer advice and move on",
+      "to": "suburbs_generator_end",
+      "effects": { "reputation": "+0" }
+    }
+  ]
+}
+

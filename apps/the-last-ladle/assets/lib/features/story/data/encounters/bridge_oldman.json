@@ -1,0 +1,23 @@
+{
+  "id": "bridge_oldman",
+  "text": "An old man huddles under a billboard, clutching a damp newspaper. He asks for coffee and quiet company.",
+  "choices": [
+    {
+      "label": "Serve him soup",
+      "to": "bridge_oldman_end",
+      "condition": "ingredients.contains('broth')",
+      "effects": { "ingredients": "-broth", "morale": "+1", "reputation": "+2" }
+    },
+    {
+      "label": "Offer water instead",
+      "to": "bridge_oldman_end",
+      "effects": { "ingredients": "-water", "morale": "0", "reputation": "-1" }
+    },
+    {
+      "label": "Drive on silently",
+      "to": "bridge_continue",
+      "effects": { "morale": "-1" }
+    }
+  ]
+}
+
