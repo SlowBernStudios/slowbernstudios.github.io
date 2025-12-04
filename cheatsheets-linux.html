@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linux Commands Cheatsheet | Slowbern Studios</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="layout">
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/images/logos/slowbern_studios.png" alt="Slowbern Studios" class="logo-img">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="devlog.html">Dev Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cheatsheets.html" class="active">Cheatsheets</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>Linux Commands Cheatsheet</h1>
+            <p>Common tools, practical flags, and quick reminders for everyday terminal work.</p>
+            <p class="cheatsheet-meta">Commands assume a typical Linux shell like <code>bash</code> or <code>zsh</code>.</p>
+        </div>
+
+        <section class="card">
+            <h2>Navigation and Files</h2>
+            <div class="cheatsheet-table">
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>pwd</code></div>
+                    <div class="cheatsheet-description">Print current directory.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>ls</code></div>
+                    <div class="cheatsheet-description">List files in current directory.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>ls -lah</code></div>
+                    <div class="cheatsheet-description">List with details, human-readable sizes, and hidden files.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>cd &lt;dir&gt;</code></div>
+                    <div class="cheatsheet-description">Change directory (<code>cd -</code> jumps to previous).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>mkdir -p &lt;dir/path&gt;</code></div>
+                    <div class="cheatsheet-description">Create directory (and parents if needed).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>cp [-r] &lt;src&gt; &lt;dst&gt;</code></div>
+                    <div class="cheatsheet-description">Copy files (<code>-r</code> for directories).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>mv &lt;src&gt; &lt;dst&gt;</code></div>
+                    <div class="cheatsheet-description">Move or rename files/directories.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>rm &lt;file&gt;</code></div>
+                    <div class="cheatsheet-description">Remove a file (<code>rm -r</code> for directories, <code>rm -rf</code> is dangerous).</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Viewing and Editing</h2>
+            <div class="cheatsheet-table">
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>cat &lt;file&gt;</code></div>
+                    <div class="cheatsheet-description">Print entire file to stdout.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>less &lt;file&gt;</code></div>
+                    <div class="cheatsheet-description">View file with paging and search (<code>/</code> to search, <code>q</code> to quit).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>head -n 20 &lt;file&gt;</code></div>
+                    <div class="cheatsheet-description">Show first 20 lines.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>tail -n 20 &lt;file&gt;</code></div>
+                    <div class="cheatsheet-description">Show last 20 lines; <code>tail -f</code> follows new lines (logs).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>nano &lt;file&gt;</code></div>
+                    <div class="cheatsheet-description">Simple terminal editor.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>vim &lt;file&gt;</code></div>
+                    <div class="cheatsheet-description">Powerful modal editor (<code>:q!</code> to quit without saving, <code>:wq</code> to save &amp; quit).</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Search and Filters</h2>
+            <div class="cheatsheet-table">
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>grep "pattern" &lt;file&gt;</code></div>
+                    <div class="cheatsheet-description">Search for lines containing a pattern.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>grep -R "pattern" &lt;dir&gt;</code></div>
+                    <div class="cheatsheet-description">Recursive search in a directory tree.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>grep -Ri "pattern" &lt;dir&gt;</code></div>
+                    <div class="cheatsheet-description">Case-insensitive recursive search.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>find . -name "*.log"</code></div>
+                    <div class="cheatsheet-description">Find files matching a pattern from current directory down.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>sort</code></div>
+                    <div class="cheatsheet-description">Sort lines from stdin (pipe into it).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>uniq [-c]</code></div>
+                    <div class="cheatsheet-description">Collapse adjacent duplicates (<code>-c</code> shows counts; usually after <code>sort</code>).</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Permissions and Ownership</h2>
+            <div class="cheatsheet-table">
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>chmod +x &lt;file&gt;</code></div>
+                    <div class="cheatsheet-description">Make a file executable.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>chmod 644 &lt;file&gt;</code></div>
+                    <div class="cheatsheet-description">Set read/write for owner, read-only for group/others (common for files).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>chmod 755 &lt;dir&gt;</code></div>
+                    <div class="cheatsheet-description">Owner can read/write/execute; others read/execute (common for dirs).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>chown &lt;user&gt;[:group] &lt;path&gt;</code></div>
+                    <div class="cheatsheet-description">Change owner (and optionally group) of file/dir.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Processes and System</h2>
+            <div class="cheatsheet-table">
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>ps aux</code></div>
+                    <div class="cheatsheet-description">List all processes.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>ps aux | grep &lt;name&gt;</code></div>
+                    <div class="cheatsheet-description">Find processes by name.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>top</code></div>
+                    <div class="cheatsheet-description">Interactive view of processes and resource usage (<code>q</code> to quit).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>htop</code></div>
+                    <div class="cheatsheet-description">Nicer version of <code>top</code> (may require install).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>kill &lt;pid&gt;</code></div>
+                    <div class="cheatsheet-description">Send TERM signal to a process.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>kill -9 &lt;pid&gt;</code></div>
+                    <div class="cheatsheet-description">Force kill (SIGKILL) a stuck process.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>df -h</code></div>
+                    <div class="cheatsheet-description">Disk usage by filesystem (human-readable).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>du -sh &lt;path&gt;</code></div>
+                    <div class="cheatsheet-description">Total size of a directory or file.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Networking and Archives</h2>
+            <div class="cheatsheet-table">
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>ping -c 4 &lt;host&gt;</code></div>
+                    <div class="cheatsheet-description">Check connectivity to a host (4 packets).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>curl -I &lt;url&gt;</code></div>
+                    <div class="cheatsheet-description">Fetch only HTTP headers (quick endpoint check).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>curl -O &lt;url&gt;</code></div>
+                    <div class="cheatsheet-description">Download a file to current directory.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>tar -czf archive.tar.gz &lt;dir&gt;</code></div>
+                    <div class="cheatsheet-description">Create a compressed archive from a directory.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>tar -xzf archive.tar.gz</code></div>
+                    <div class="cheatsheet-description">Extract a <code>.tar.gz</code> archive.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>ssh &lt;user&gt;@&lt;host&gt;</code></div>
+                    <div class="cheatsheet-description">SSH into a remote host using your default key.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>scp &lt;file&gt; &lt;user&gt;@&lt;host&gt;:&lt;path&gt;</code></div>
+                    <div class="cheatsheet-description">Copy a file to a remote host via SSH.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card cheatsheet-footer-links">
+            <p>Jump to other references from the <a href="cheatsheets.html">Terminal Cheatsheets index</a>, or open the <a href="cheatsheets-git.html">Git</a> and <a href="cheatsheets-tmux.html">tmux</a> cheatsheets.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Slowbern Studios. All rights reserved. &middot;
+            <a href="privacy.html">Privacy</a> &middot;
+            <a href="terms.html">Terms</a> &middot;
+            <a href="cookies.html">Cookies</a> &middot;
+            <a href="disclaimer.html">Disclaimer</a>
+        </p>
+    </footer>
+</div>
+</body>
+</html>
+

@@ -550,6 +550,97 @@ footer {
   border: 2px solid var(--medium-brown);
 }
 
+/* Cheatsheets */
+.cheatsheet-intro {
+  margin-bottom: 30px;
+}
+
+.cheatsheet-meta {
+  margin-top: 10px;
+  color: var(--light-ash);
+  font-size: 0.95rem;
+}
+
+.cheatsheet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.cheatsheet-tile {
+  background: var(--card-background);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid var(--medium-brown);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+  text-decoration: none;
+  color: var(--warm-text);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.cheatsheet-tile h3 {
+  color: var(--ember-text);
+  margin-bottom: 10px;
+}
+
+.cheatsheet-tile ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.cheatsheet-tile li {
+  margin: 4px 0;
+}
+
+.cheatsheet-tile:hover {
+  transform: translateY(-6px);
+  border-color: var(--ember-orange);
+  box-shadow: 0 10px 22px rgba(212, 97, 10, 0.3);
+}
+
+.cheatsheet-table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.cheatsheet-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 260px) 1fr;
+  gap: 18px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cheatsheet-command code {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-family: "Fira Code", "Consolas", "Menlo", monospace;
+  font-size: 0.9rem;
+  color: var(--golden-ember);
+}
+
+.cheatsheet-description {
+  color: var(--warm-text);
+  font-size: 0.95rem;
+}
+
+.cheatsheet-footer-links {
+  font-size: 0.95rem;
+  color: var(--light-ash);
+}
+
+.cheatsheet-footer-links a {
+  color: var(--ember-text);
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 12px;

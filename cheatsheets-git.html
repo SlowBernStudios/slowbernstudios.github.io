@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Cheatsheet | Slowbern Studios</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="layout">
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/images/logos/slowbern_studios.png" alt="Slowbern Studios" class="logo-img">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="devlog.html">Dev Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cheatsheets.html" class="active">Cheatsheets</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>Git Cheatsheet</h1>
+            <p>Practical Git commands for real-world workflows: committing, branching, syncing, and recovering from mistakes.</p>
+            <p class="cheatsheet-meta">Prefix: run these in a Git repository. Optional flags are in <code>[brackets]</code>.</p>
+        </div>
+
+        <section class="card">
+            <h2>Everyday Workflow</h2>
+            <div class="cheatsheet-table">
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git status</code></div>
+                    <div class="cheatsheet-description">Show what changed and what’s staged.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git add &lt;file&gt;</code></div>
+                    <div class="cheatsheet-description">Stage a specific file.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git add -p</code></div>
+                    <div class="cheatsheet-description">Interactively stage chunks (great for clean commits).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git commit -m "message"</code></div>
+                    <div class="cheatsheet-description">Create a commit with a message.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git commit --amend</code></div>
+                    <div class="cheatsheet-description">Amend the last commit (message and staged changes).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git log --oneline --graph --decorate --all</code></div>
+                    <div class="cheatsheet-description">Compact, visual commit history with branches.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Branches and Remotes</h2>
+            <div class="cheatsheet-table">
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git branch</code></div>
+                    <div class="cheatsheet-description">List local branches; <code>*</code> marks current.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git branch -a</code></div>
+                    <div class="cheatsheet-description">List local and remote branches.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git switch -c &lt;branch&gt;</code></div>
+                    <div class="cheatsheet-description">Create and switch to a new branch.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git switch &lt;branch&gt;</code></div>
+                    <div class="cheatsheet-description">Switch to an existing branch.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git push -u origin &lt;branch&gt;</code></div>
+                    <div class="cheatsheet-description">Create branch on remote and set upstream.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git fetch [--all]</code></div>
+                    <div class="cheatsheet-description">Update remote-tracking branches without merging.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git pull --rebase</code></div>
+                    <div class="cheatsheet-description">Fetch + rebase your work on top of remote (avoids merge bubbles).</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Undo and Fix-Ups</h2>
+            <p><strong>Warning:</strong> Commands that rewrite history (like <code>reset --hard</code> or <code>push --force</code>) are dangerous on shared branches. Prefer <code>revert</code> on main.</p>
+            <div class="cheatsheet-table">
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git restore &lt;file&gt;</code></div>
+                    <div class="cheatsheet-description">Throw away unstaged changes in a file (reset to HEAD).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git restore --staged &lt;file&gt;</code></div>
+                    <div class="cheatsheet-description">Unstage a file (keep changes in working tree).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git revert &lt;commit&gt;</code></div>
+                    <div class="cheatsheet-description">Create a new commit that undoes a specific commit (safe for shared history).</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git reset --soft HEAD~1</code></div>
+                    <div class="cheatsheet-description">Uncommit last commit but keep all changes staged.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git reset --mixed HEAD~1</code></div>
+                    <div class="cheatsheet-description">Uncommit and unstage last commit, keep changes in working tree.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git reset --hard HEAD~1</code></div>
+                    <div class="cheatsheet-description">Drop last commit and all related changes (destructive).</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Stashing and Cleaning</h2>
+            <div class="cheatsheet-table">
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git stash push -m "msg"</code></div>
+                    <div class="cheatsheet-description">Stash current changes with a label.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git stash list</code></div>
+                    <div class="cheatsheet-description">Show stashes with their indices.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git stash show -p stash@{0}</code></div>
+                    <div class="cheatsheet-description">Preview what a stash contains.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git stash apply [stash@{n}]</code></div>
+                    <div class="cheatsheet-description">Apply a stash, keep it in the list.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git stash pop</code></div>
+                    <div class="cheatsheet-description">Apply the latest stash and drop it.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git clean -fd</code></div>
+                    <div class="cheatsheet-description">Remove untracked files and directories (<code>-n</code> for dry run).</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Rebasing and History Editing</h2>
+            <div class="cheatsheet-table">
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git rebase main</code></div>
+                    <div class="cheatsheet-description">Replay current branch on top of <code>main</code>.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git rebase -i HEAD~5</code></div>
+                    <div class="cheatsheet-description">Interactively edit, squash, or drop the last 5 commits.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git rebase --continue</code></div>
+                    <div class="cheatsheet-description">Continue rebase after resolving conflicts.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git rebase --abort</code></div>
+                    <div class="cheatsheet-description">Abort the rebase and return to previous state.</div>
+                </div>
+                <div class="cheatsheet-row">
+                    <div class="cheatsheet-command"><code>git push --force-with-lease</code></div>
+                    <div class="cheatsheet-description">Force-push safely after rewriting history (checks remote head).</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card cheatsheet-footer-links">
+            <p>Need a different cheatsheet? Visit the <a href="cheatsheets.html">Terminal Cheatsheets index</a> or jump to <a href="cheatsheets-tmux.html">tmux</a> and <a href="cheatsheets-linux.html">Linux commands</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Slowbern Studios. All rights reserved. &middot;
+            <a href="privacy.html">Privacy</a> &middot;
+            <a href="terms.html">Terms</a> &middot;
+            <a href="cookies.html">Cookies</a> &middot;
+            <a href="disclaimer.html">Disclaimer</a>
+        </p>
+    </footer>
+</div>
+</body>
+</html>
+
