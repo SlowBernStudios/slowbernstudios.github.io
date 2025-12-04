@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c1810"/>
+      <stop offset="50%" stop-color="#3a2818"/>
+      <stop offset="100%" stop-color="#5d4037"/>
+    </linearGradient>
+    <linearGradient id="border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff8a50"/>
+      <stop offset="50%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#ffab40"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="675" fill="url(#bg)"/>
+  <rect x="40" y="40" width="1120" height="595" fill="none" stroke="url(#border)" stroke-width="6" rx="24" ry="24"/>
+  <text x="50%" y="45%" text-anchor="middle" fill="#ff8a50" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="bold">
+    Slowbern Studios
+  </text>
+  <text x="50%" y="58%" text-anchor="middle" fill="#f5deb3" font-family="Arial, Helvetica, sans-serif" font-size="32">
+    Game artwork coming soon
+  </text>
+</svg>
+

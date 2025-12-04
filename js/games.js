@@ -22,6 +22,10 @@ class GameManager {
         const tags = Array.isArray(game.tags) ? game.tags.map(tag => slugify(tag)) : [];
         const platforms = Array.isArray(game.platforms) ? game.platforms.map(platform => slugify(platform)) : [];
         const platformLabel = Array.isArray(game.platforms) ? game.platforms.join(', ') : '';
+        const hasImages = Array.isArray(game.images) && game.images.length > 0;
+        const imageSrc = hasImages
+            ? `assets/images/games/${game.id}/${game.images[0]}`
+            : 'assets/images/games/placeholder.svg';
         const tagMarkup = Array.isArray(game.tags) && game.tags.length
             ? game.tags.map(tag => `<span class="tag ${slugify(tag)}">${tag}</span>`).join('')
             : '';
@@ -31,7 +35,7 @@ class GameManager {
         return `
             <div class="game-card" data-status="${slugify(game.status)}" data-genre="${slugify(game.genre)}" data-tags="${tags.join(',')}" data-platforms="${platforms.join(',')}">
                 <div class="game-image">
-                    <img src="assets/images/games/${game.id}/${game.images[0]}" alt="${game.title}" loading="lazy">
+                    <img src="${imageSrc}" alt="${game.title}" loading="lazy">
                 </div>
                 <div class="game-info">
                     <span class="game-status ${slugify(game.status)}">${(game.status || '').replace('-', ' ')}</span>

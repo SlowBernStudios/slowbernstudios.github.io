@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="320" viewBox="0 0 800 320">
+  <defs>
+    <linearGradient id="lc-logo-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2c1810"/>
+      <stop offset="100%" stop-color="#3a2818"/>
+    </linearGradient>
+    <linearGradient id="lc-logo-text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7ae9d0"/>
+      <stop offset="50%" stop-color="#ff8a50"/>
+      <stop offset="100%" stop-color="#f45c8f"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="320" rx="32" ry="32"
+        fill="url(#lc-logo-bg)" stroke="#ff8a50" stroke-width="4"/>
+
+  <!-- Small circuit motif -->
+  <g stroke="#4a4a4a" stroke-width="2" opacity="0.7">
+    <path d="M90 90 H200 V150 H260"/>
+    <circle cx="200" cy="90" r="5" fill="#7ae9d0"/>
+    <circle cx="260" cy="150" r="5" fill="#ff8a50"/>
+  </g>
+
+  <!-- Text -->
+  <text x="50%" y="165" text-anchor="middle"
+        fill="url(#lc-logo-text)" font-family="Arial, Helvetica, sans-serif"
+        font-size="54" font-weight="bold" letter-spacing="6">
+    THE LAST CIRCUIT
+  </text>
+
+  <text x="50%" y="210" text-anchor="middle"
+        fill="#f5deb3" font-family="Arial, Helvetica, sans-serif"
+        font-size="20">
+    Prototype · Terminal Strategy · Web
+  </text>
+</svg>
+

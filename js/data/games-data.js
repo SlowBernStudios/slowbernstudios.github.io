@@ -9,7 +9,7 @@ const gamesData = {
             "releaseDate": "TBD",
             "genre": "Puzzle-Platformer",
             "platforms": ["PC"],
-            "tags": ["pc", "puzzle", "platformer", "story", "in-development"],
+            "tags": ["pc", "puzzle", "story"],
             "features": [
                 "Manipulate light to solve security puzzles",
                 "Blend pigments to forge tools and unlock paths",
@@ -26,8 +26,8 @@ const gamesData = {
             "status": "in-development",
             "releaseDate": "TBD",
             "genre": "Retail Simulator",
-            "platforms": ["PC", "Mobile"],
-            "tags": ["pc", "mobile", "simulation", "management", "in-development"],
+            "platforms": ["PC"],
+            "tags": ["pc", "simulation", "management"],
             "features": [
                 "Day/night cycle with shifting customer demand",
                 "Shelf-stocking puzzles and quirky VIP orders",
@@ -43,9 +43,9 @@ const gamesData = {
             "description": "A cozy underwater social sim where you befriend sea creatures and help restore the ocean. Catch drifting plastic, assist in conservation, and build homes for aquatic friends in an open-ended, peaceful world.",
             "status": "in-development",
             "releaseDate": "TBD",
-            "genre": "Social Simulator",
-            "platforms": ["PC", "Console"],
-            "tags": ["pc", "console", "cozy", "simulation", "in-development"],
+            "genre": "Social Simulation",
+            "platforms": ["PC"],
+            "tags": ["pc", "cozy", "simulation"],
             "features": [
                 "Dynamic ocean biomes that react to your care",
                 "Friendship quests with expressive marine life",
@@ -58,18 +58,36 @@ const gamesData = {
         {
             "id": "thelastladle",
             "title": "The Last Ladle",
-            "description": "A new project from Slowbern Studios. Details and web demo coming soon.",
+            "description": "A full text adventure game where you operate the last food truck in a post-apocalyptic world. Scavenge for ingredients, and feed the last of humanity.",
             "status": "in-development",
             "releaseDate": "TBD",
-            "genre": "Cooking Simulator",
+            "genre": "Text Adventure",
             "platforms": ["Web", "PC"],
-            "tags": ["web", "simulation", "cozy", "in-development"],
+            "tags": ["web", "cozy", "text-adventure"],
             "features": [
                 "Relaxed, session-friendly gameplay",
                 "Progression-focused systems",
                 "Stylized visuals"
             ],
             "images": ["thelastladle_keyart.svg", "thelastladle_logo.svg"],
+            "trailerUrl": "",
+            "downloadLinks": {}
+        },
+        {
+            "id": "thelastcircuit",
+            "title": "The Last Circuit",
+            "description": "A terminal-first, Vite-powered prototype where you stabilize a collapsing network by issuing SCAN, REPAIR, ROUTE, and OPTIMIZE commands through an in-world console.",
+            "status": "prototype",
+            "releaseDate": "TBD",
+            "genre": "Terminal Strategy Prototype",
+            "platforms": ["Web"],
+            "tags": ["web", "prototype", "terminal"],
+            "features": [
+                "In-browser, command-driven interface",
+                "Dynamic network metrics and entropy management",
+                "Lore-leaning field notes unlocked through play"
+            ],
+            "images": ["thelastcircuit_keyart.svg", "thelastcircuit_logo.svg"],
             "trailerUrl": "",
             "downloadLinks": {}
         }

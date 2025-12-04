@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Blog - Slowbern Studios</title>
+    <title>Web Games - Slowbern Studios</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/games.css">
+    <link rel="stylesheet" href="css/components/game-card.css">
 </head>
 <body>
 <header>
@@ -16,8 +18,8 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="games.html">Games</a></li>
-                <li><a href="web-games.html">Web Games</a></li>
-                <li><a href="devlog.html" class="active">Dev Blog</a></li>
+                <li><a href="web-games.html" class="active">Web Games</a></li>
+                <li><a href="devlog.html">Dev Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="cheatsheets.html">Cheatsheets</a></li>
@@ -28,22 +30,13 @@
 
 <main>
     <header class="page-header">
-        <h1>Development Blog</h1>
-        <p>Stay updated with our latest game development news and updates</p>
+        <h1>Web Games</h1>
+        <p>Play our browser-first prototypes and experiences directly in your terminal-friendly web setup.</p>
     </header>
 
-    <section class="news-filters">
-        <div class="filter-buttons">
-            <button class="news-filter-btn active" data-filter="all">All News</button>
-            <button class="news-filter-btn" data-filter="update">Updates</button>
-            <button class="news-filter-btn" data-filter="release">Releases</button>
-            <button class="news-filter-btn" data-filter="announcement">Announcements</button>
-        </div>
-    </section>
-
-    <section class="news-section">
-        <div id="news-container">
-            <!-- News will be loaded here dynamically -->
+    <section class="games-section">
+        <div id="web-games-container">
+            <!-- Web games will be loaded here dynamically -->
         </div>
     </section>
 </main>
@@ -58,9 +51,10 @@
 </footer>
 
 <!-- Scripts -->
-<script src="js/data/news-data.js"></script>
-<script src="js/devlog.js"></script>
+<script src="js/data/games-data.js"></script>
+<script src="js/web-games.js"></script>
 <script src="js/meta-manager.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
+
