@@ -7,6 +7,7 @@ class WebGameManager {
 
     init() {
         this.renderGamesList();
+        this.setupFilters();
     }
 
     renderGamesList() {
@@ -65,9 +66,43 @@ class WebGameManager {
             </div>
         `;
     }
+
+    setupFilters() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                this.filterGames(e.target.dataset.filter);
+            });
+        });
+    }
+
+    filterGames(filter) {
+        const normalizedFilter = (filter || '').toLowerCase();
+        const gameCards = document.querySelectorAll('.game-card');
+
+        gameCards.forEach(card => {
+            if (normalizedFilter === 'all') {
+                card.style.display = 'block';
+                return;
+            }
+
+            const tags = (card.dataset.tags || '').toLowerCase().split(',').filter(Boolean);
+            const platforms = (card.dataset.platforms || '').toLowerCase().split(',').filter(Boolean);
+            const status = (card.dataset.status || '').toLowerCase();
+            const genre = (card.dataset.genre || '').toLowerCase();
+
+            const matches = tags.includes(normalizedFilter) ||
+                platforms.includes(normalizedFilter) ||
+                status === normalizedFilter ||
+                genre === normalizedFilter;
+
+            card.style.display = matches ? 'block' : 'none';
+        });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
     new WebGameManager();
 });
-

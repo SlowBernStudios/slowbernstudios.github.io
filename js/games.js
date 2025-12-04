@@ -12,7 +12,15 @@ class GameManager {
 
     renderGamesList() {
         const container = document.getElementById('games-container');
-        const gamesHTML = this.games.current.map(game => this.createGameCard(game)).join('');
+        const gamesHTML = (this.games.current || [])
+            // Exclude web-platform games from the main Games page;
+            // they are showcased separately under Web Games.
+            .filter(game =>
+                !Array.isArray(game.platforms) ||
+                !game.platforms.some(platform => String(platform).toLowerCase() === 'web')
+            )
+            .map(game => this.createGameCard(game))
+            .join('');
         container.innerHTML = gamesHTML;
     }
 
