@@ -90,6 +90,24 @@ const gamesData = {
             "images": ["thelastcircuit_keyart.svg", "thelastcircuit_logo.svg"],
             "trailerUrl": "",
             "downloadLinks": {}
+        },
+        {
+            "id": "puzzlesuite",
+            "title": "Puzzle Suite",
+            "description": "A handcrafted browser suite of eighteen classic puzzle games led by Chromogram, a Slowbern original. Jump between nonograms, sudoku, minesweeper, and more with an offline-ready, installable experience.",
+            "status": "prototype",
+            "releaseDate": "TBD",
+            "genre": "Puzzle Collection",
+            "platforms": ["Web"],
+            "tags": ["web", "puzzle", "collection"],
+            "features": [
+                "18 classic puzzle modes plus the original Chromogram",
+                "Seeded puzzles, hints, and accessibility toggles",
+                "Installable PWA built for offline play"
+            ],
+            "images": ["puzzlesuite_icon.svg"],
+            "trailerUrl": "",
+            "downloadLinks": {}
         }
     ],
     "expansions": []

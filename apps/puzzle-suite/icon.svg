@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e0a36f" />
+      <stop offset="1" stop-color="#c98347" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="20" fill="#1c120a" />
+  <rect x="16" y="16" width="96" height="96" rx="10" fill="none" stroke="url(#g)" stroke-width="6" />
+  <g stroke="url(#g)" stroke-width="3" opacity="0.9">
+    <line x1="48" y1="16" x2="48" y2="112" />
+    <line x1="80" y1="16" x2="80" y2="112" />
+    <line x1="16" y1="48" x2="112" y2="48" />
+    <line x1="16" y1="80" x2="112" y2="80" />
+  </g>
+  <text x="64" y="74" font-size="28" text-anchor="middle" fill="url(#g)" font-family="'Courier New', monospace">PS</text>
+</svg>

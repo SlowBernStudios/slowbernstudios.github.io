@@ -1,0 +1,16 @@
+{
+  "name": "Puzzle Suite",
+  "short_name": "Puzzle",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#1c120a",
+  "theme_color": "#1c120a",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
