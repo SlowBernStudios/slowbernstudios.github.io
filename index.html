@@ -1,61 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slowbern Studios</title>
-    <link rel="stylesheet" href="css/style.css?v=1.2" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Cache busting meta tags -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>We moved - Slowbern Studios</title>
+  <link rel="canonical" href="https://slowbern.dev/">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      text-align: center;
+    }
+
+    .card {
+      max-width: 720px;
+      width: min(100%, 720px);
+      margin: 0;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 40px);
+      color: var(--ember-text);
+    }
+
+    p {
+      margin: 0 0 22px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--warm-text);
+    }
+
+    .note {
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--light-ash);
+    }
+  </style>
+  <script src="main.js" defer></script>
 </head>
 <body>
-<div class="layout">
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <img src="assets/images/logos/slowbern_studios.png" alt="Slowbern Studios" class="logo-img">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="games.html">Games</a></li>
-                    <li><a href="web-games.html">Web Games</a></li>
-                    <li><a href="devlog.html">Dev Blog</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="cheatsheets.html">Cheatsheets</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container">
-        <div class="page-header">
-            <h1>Welcome to Slowbern Studios!</h1>
-            <p>We craft immersive, imaginative games for curious minds that love to wonder, wander, and get a little lost in the details.</p>
-        </div>
-
-        <section id="featured-games" class="featured-games">
-            <!-- Featured games will be loaded here dynamically -->
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Slowbern Studios. All rights reserved. &middot; 
-            <a href="privacy.html">Privacy</a> &middot; 
-            <a href="terms.html">Terms</a> &middot; 
-            <a href="cookies.html">Cookies</a> &middot; 
-            <a href="disclaimer.html">Disclaimer</a>
-        </p>
-    </footer>
-</div>
-
-<!-- Scripts with cache busting - update version numbers when files change -->
-<script src="js/data/games-data.js?v=1.0"></script>
-<script src="js/meta-manager.js?v=1.0"></script>
-<script src="js/main.js?v=1.0"></script>
+  <main class="card" role="main">
+    <h1>We moved!</h1>
+    <p>Hey! We’re hanging out at slowbern.dev now. We’ll send you there in a few seconds.</p>
+    <a class="btn" href="https://slowbern.dev/" data-redirect>
+      Take me there <span aria-live="polite">(<span data-countdown>10</span>s)</span>
+    </a>
+    <div class="note">Auto-redirect in 10 seconds, or click the button to go now.</div>
+  </main>
 </body>
 </html>
